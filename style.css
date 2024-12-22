@@ -1,0 +1,273 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e5f9f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.-FTQ1tvaJsC5OP7_RwDfpAHaES&pid=Api&P=0&h=180');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.7);
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    animation: fadeIn 2s ease-out; /* Animation for header */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards 0.5s; /* Fade-in effect for heading */
+}
+
+header p {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s; /* Fade-in effect for subheading */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2e7d32;
+    padding: 15px;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #81c784;
+    transform: scale(1.1); /* Hover scale effect */
+}
+
+/* Page Sections */
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+/* Section Fade-In Effect */
+section {
+    padding: 50px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+/* Image Hover Effect */
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+    filter: brightness(0.8); /* Darken image on hover */
+}
+
+/* Solutions Section */
+.solutions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.solution {
+    background-color: #81c784;
+    padding: 30px;
+    border-radius: 10px;
+    width: 32%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 0.5s; /* Animation for solutions */
+}
+
+.solution h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.solution p {
+    font-size: 1rem;
+}
+
+/* Goals and Problems Section */
+.goals, .user-problems {
+    background-color: #2e7d32;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 0.5s; /* Animation for goals */
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards 0.5s;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #81c784;
+    transform: scale(1.1);
+}
+
+/* Footer Section */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* YouTube Resources Section */
+#resources {
+    background-color: #f0f5f1;
+    padding: 50px 0;
+    text-align: center;
+    color: #333;
+}
+
+#resources h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.videos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.video {
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.video img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.video:hover {
+    transform: scale(1.05); /* Hover scale effect */
+}
+
+.video p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Adding hover effect on the video links */
+.video a {
+    text-decoration: none;
+    color: #333;
+}
+
+.video a:hover img {
+    transform: scale(1.05); /* Image hover effect */
+}
